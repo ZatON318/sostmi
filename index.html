@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOSTMI - Stredná odborná škola techniky a masmédií</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23f0f2f5" width="1000" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: white;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>SOSTMI</h1>
+                    <p>Stredná odborná škola techniky a masmédií</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Domov</a></li>
+                    <li><a href="#about">O škole</a></li>
+                    <li><a href="#fields">Odbory</a></li>
+                    <li><a href="#news">Aktuality</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Vitajte na SOSTMI</h2>
+                <p>Moderná škola pripravujúca odborníkov pre budúcnosť</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>O našej škole</h2>
+                <div class="card">
+                    <h3>História a poslanie</h3>
+                    <p>Stredná odborná škola techniky a masmédií (SOSTMI) je moderná vzdelávacia inštitúcia, ktorá pripravuje študentov pre dynamicky sa rozvíjajúci svet technológií a médií. Naša škola sa zameriava na poskytovanie kvalitného odborného vzdelávania s dôrazom na praktické zručnosti a tvorivosť.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Naše hodnoty</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✓ <strong>Inovácia</strong> - Sledujeme najnovšie trendy v technológiách</li>
+                        <li>✓ <strong>Kreativita</strong> - Podporujeme tvorivé myslenie študentov</li>
+                        <li>✓ <strong>Praktickosť</strong> - Vzdelávanie spojené s praxou</li>
+                        <li>✓ <strong>Kvalita</strong> - Vysoký štandard vzdelávania</li>
+                        <li>✓ <strong>Budúcnosť</strong> - Príprava na profesie zajtrajška</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="fields" class="fields">
+            <div class="container">
+                <h2>Študijné odbory</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>💻 Informačné technológie</h3>
+                        <p>Programovanie, webový dizajn, správa sietí, kybernetická bezpečnosť a vývoj aplikácií. Študenti sa naučia moderné programovacie jazyky a technológie.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🎬 Masmédiá a komunikácia</h3>
+                        <p>Grafický dizajn, video produkcia, fotografia, copywriting a digitálny marketing. Príprava na prácu v mediálnom priemysle.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🔧 Elektrotechnika</h3>
+                        <p>Elektronika, automatizácia, robotika a smart technológie. Praktické zručnosti v oblasti elektrotechniky a automatizácie.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🎮 Herný dizajn</h3>
+                        <p>Vývoj počítačových hier, 3D modelovanie, animácie a interaktívny dizajn. Príprava na prácu v hernom priemysle.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>📱 Mobilné technológie</h3>
+                        <p>Vývoj mobilných aplikácií, UX/UI dizajn, testovanie aplikácií a publikovanie na platformách.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🌐 Webové technológie</h3>
+                        <p>Front-end a back-end vývoj, responzívny dizajn, e-commerce riešenia a optimalizácia webových stránok.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news">
+            <div class="container">
+                <h2>Aktuality</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>🏆 Úspech na súťaži programovania</h3>
+                        <p><strong>15. október 2024</strong> - Naši študenti získali prvé miesto na krajskej súťaži v programovaní. Gratulujeme Petrov Novákovi a Márii Svobodovej!</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>💡 Nové laboratórium robotiky</h3>
+                        <p><strong>8. október 2024</strong> - Otvorili sme moderne vybavené laboratórium robotiky s najnovšími robotickými stavebnicami a 3D tlačiarňami.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>📅 Deň otvorených dverí</h3>
+                        <p><strong>20. november 2024</strong> - Pozývame vás na Deň otvorených dverí. Prezentácia odborov od 9:00 do 15:00. Registrácia na recepcii.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🎯 Partnerstvo s IT firmami</h3>
+                        <p><strong>2. október 2024</strong> - Podpísali sme dohody o spolupráci s lokálnymi IT firmami pre praktické stáže našich študentov.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Adresa</h3>
+                        <p>Stredná odborná škola techniky a masmédií<br>
+                        Školská ulica 123<br>
+                        010 01 Žilina<br>
+                        Slovenská republika</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📞 Telefón</h3>
+                        <p>Sekretariát: +421 41 123 4567<br>
+                        Riaditeľ: +421 41 123 4568<br>
+                        Študijné oddelenie: +421 41 123 4569</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@sostmi.sk<br>
+                        riaditel@sostmi.sk<br>
+                        studijne@sostmi.sk</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>🕒 Úradné hodiny</h3>
+                        <p>Pondelok - Piatok<br>
+                        8:00 - 15:00<br>
+                        Obedňajšia pauza: 12:00 - 12:30</p>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 3rem; text-align: center;">
+                    <h3>🚌 Dopravná dostupnosť</h3>
+                    <p>Škola sa nachádza v centre Žiliny, ľahko dostupná MHD. Zastávky: "Centrum" (50m), "Školská" (100m). 
+                    Parkovanie pre návštevníkov k dispozícii v areáli školy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SOSTMI - Stredná odborná škola techniky a masmédií</p>
+        </div>
+    </footer>
+</body>
+</html>
